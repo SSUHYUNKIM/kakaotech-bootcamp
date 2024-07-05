@@ -18,6 +18,17 @@ function addTask() {
     saveData();
 }
 
+function deleteAllTasks() {
+    listContainer.innerHTML = '';
+    saveData();
+}
+
+inputBox.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        addTask();
+    }
+});
+
 listContainer.addEventListener("click", function(e) {
     if(e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
