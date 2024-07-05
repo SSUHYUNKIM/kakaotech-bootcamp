@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <meta name ="viewport" content="Width=device-width, initial-scale=1">
     <title>To-Do List App - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
@@ -11,15 +12,15 @@
         <h2>To-Do List <img src="images/icon.png"></h2>
         <div class="row">
             <input type="text" id="input-box" placeholder="Add Your text">
-            <button onclick="addTask()">Add</button>
+            <button onclick="addTask()">추가</button>
         </div>
         <ul id="list-container"></ul>
         <div class="button-container">
-            <div id="incomplete-count">Incomplete items: 0</div>
-            <button class="filter-btn" id="all" onclick="filterTasks('all')">All</button>
-            <button class="filter-btn" id="active" onclick="filterTasks('active')">Active</button>
-            <button class="filter-btn" id="completed" onclick="filterTasks('completed')">completed</button>
-            <button class="delete_all_btn" onclick="deleteAllTasks()">Delete All</button>
+            <div id="incomplete-count">해야 할 일: 0</div>
+            <button class="filter-btn" id="all" onclick="filterTasks('all')">전체</button>
+            <button class="filter-btn" id="active" onclick="filterTasks('active')">미완료</button>
+            <button class="filter-btn" id="completed" onclick="filterTasks('completed')">완료</button>
+            <button class="delete_all_btn" onclick="deleteAllTasks()">전체 삭제</button>
         </div>
     </div>
 </div>
