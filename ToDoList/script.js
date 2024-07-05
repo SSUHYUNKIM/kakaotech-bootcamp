@@ -1,6 +1,17 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+function updateIncompleteCount() {
+    const tasks = listContainer.getElementsByTagName("li");
+    let incompleteCount = 0;
+    for (let task of tasks) {
+        if (!task.classList.contains("checked")) {
+            incompleteCount++;
+        }
+    }
+    document.getElementById("incomplete-count").innerText = "Incomplete items: " + incompleteCount;
+}
+
 function addTask() {
     if(inputBox.value === "") {
         alert("Please enter a task");
@@ -16,11 +27,13 @@ function addTask() {
     }
     inputBox.value = "";
     saveData();
+    updateIncompleteCount();
 }
 
 function deleteAllTasks() {
     listContainer.innerHTML = '';
     saveData();
+    updateIncompleteCount();
 }
 
 inputBox.addEventListener("keydown", function(event) {
@@ -38,6 +51,7 @@ listContainer.addEventListener("click", function(e) {
         e.target.parentElement.remove();
         saveData();
     }
+    updateIncompleteCount();
 }, false);
 
 function saveData() {
@@ -46,6 +60,7 @@ function saveData() {
 
 function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
+    updateIncompleteCount();
 }
 
 showTask();

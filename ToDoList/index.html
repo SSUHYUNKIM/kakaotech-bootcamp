@@ -15,7 +15,11 @@
         </div>
         <ul id="list-container"></ul>
         <div class="button-container">
-            <button id="deleteAll" onclick="deleteAllTasks()">Delete All</button>
+            <div id="incomplete-count">Incomplete items: 0</div>
+            <button class="filter-btn" id="all">All</button>
+            <button class="filter-btn" id="active">Active</button>
+            <button class="filter-btn" id="unactive">Unactive</button>
+            <button class="delete_all_btn" onclick="deleteAllTasks()">Delete All</button>
         </div>
     </div>
 </div>

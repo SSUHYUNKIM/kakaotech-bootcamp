@@ -99,7 +99,16 @@ ul li span:hover {
 }
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     width: 100%;
 }
-
+.incomplete-count {
+    bottom: 20px;
+    left: 20px;
+    font-size: 18px;
+}
+.delete_all_btn:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
