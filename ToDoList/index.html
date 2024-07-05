@@ -16,9 +16,9 @@
         <ul id="list-container"></ul>
         <div class="button-container">
             <div id="incomplete-count">Incomplete items: 0</div>
-            <button class="filter-btn" id="all">All</button>
-            <button class="filter-btn" id="active">Active</button>
-            <button class="filter-btn" id="unactive">Unactive</button>
+            <button class="filter-btn" id="all" onclick="filterTasks('all')">All</button>
+            <button class="filter-btn" id="active" onclick="filterTasks('active')">Active</button>
+            <button class="filter-btn" id="completed" onclick="filterTasks('completed')">completed</button>
             <button class="delete_all_btn" onclick="deleteAllTasks()">Delete All</button>
         </div>
     </div>

@@ -30,6 +30,18 @@ function addTask() {
     updateIncompleteCount();
 }
 
+function filterTasks(filter) {
+    const tasks = listContainer.getElementsByTagName('li');
+    for (let task of tasks) {
+        task.classList.remove('hidden');
+        if (filter === 'active' && task.classList.contains('checked')) {
+            task.classList.add('hidden');
+        } else if (filter === 'completed' && task.classList.contains('unchecked')) {
+            task.classList.add('hidden');
+        }
+    }
+}
+
 function deleteAllTasks() {
     listContainer.innerHTML = '';
     saveData();
@@ -42,16 +54,20 @@ inputBox.addEventListener("keydown", function(event) {
     }
 });
 
-listContainer.addEventListener("click", function(e) {
-    if(e.target.tagName === "LI") {
-        e.target.classList.toggle("checked");
-        saveData();
-    }
-    else if(e.target.tagName === "SPAN") {
+listContainer.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        if(e.target.classList.contains('checked')) {
+            e.target.classList.remove('checked');
+            e.target.classList.add('unchecked');
+        } else {
+            e.target.classList.remove('unchecked');
+            e.target.classList.add('checked');
+        }
+    } else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove();
-        saveData();
     }
     updateIncompleteCount();
+    saveData();
 }, false);
 
 function saveData() {
