@@ -124,7 +124,7 @@ ul li edit:hover {
 #incomplete-count {
     bottom: 20px;
     font-size: 18px;
-    margin-right: 50px;
+    margin-right: 90px;
 }
 .filter-btn {
     margin: 0 5px;
@@ -142,7 +142,7 @@ ul li edit:hover {
 }
 
 .delete_all_btn {
-    margin-left: 50px;
+    margin-left: 90px;
 }
 .delete_all_btn:hover {
     text-decoration: underline;

@@ -9,7 +9,7 @@ function updateIncompleteCount() {
             incompleteCount++;
         }
     }
-    document.getElementById("incomplete-count").innerText = "Incomplete items: " + incompleteCount;
+    document.getElementById("incomplete-count").innerText = "해야 할 일: " + incompleteCount;
 }
 
 function addTask() {
