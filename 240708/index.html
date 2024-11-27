@@ -12,7 +12,7 @@
 <h1>Kakao Map API Example</h1>
 <div id="map"></div>
 <button id="searchBtn">Search Address</button>
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=ef07d28de00cd5e8b9e06198a4cb548e"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=appkey"></script>
 <script>
     var map;
 
@@ -32,7 +32,7 @@
         fetch(`https://dapi.kakao.com/v2/local/search/address.json?query=${query}`, {
             method: 'GET',
             headers: {
-                'Authorization': 'KakaoAK a1f56c996700414e8c59bf2f331d8091' // REST API 키 사용
+                'Authorization': 'KakaoAK restApi' // REST API 키 사용
             }
         })
             .then(response => {
